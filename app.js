@@ -15,8 +15,10 @@ var commentRoutes=require("./routes/comments"),
     campgroundRoutes=require("./routes/campgrounds"),
     indexRoutes=require("./routes/index");
 
+mongoose.connect(process.env.DATABASEURL);
+//console.log(process.env.DATABASEURL);
 //mongoose.connect("mongodb://localhost:27017/yelp_campus",{useNewUrlParser:true});
-mongoose.connect("mongodb+srv://rajat47:Rsingla@47@cluster0-argwh.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser:true});
+//mongoose.connect("mongodb+srv://rajat47:Rsingla@47@cluster0-argwh.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser:true});
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.set("view engine","ejs");

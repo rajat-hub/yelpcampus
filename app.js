@@ -16,11 +16,11 @@ var commentRoutes=require("./routes/comments"),
     indexRoutes=require("./routes/index");
 
 
-//var url=process.env.DATABASEURL || "mongodb://localhost:27017/yelp_campus";
-//mongoose.connect(url);
+var url=process.env.DATABASEURL || "mongodb://localhost:27017/yelp_campus";
+mongoose.connect(url);
 //console.log(process.env.DATABASEURL);
 //mongoose.connect("mongodb://localhost:27017/yelp_campus",{useNewUrlParser:true});
-mongoose.connect("mongodb+srv://rajat47:Rsingla@47@cluster0-argwh.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser:true});
+//mongoose.connect("mongodb+srv://rajat47:Rsingla@47@cluster0-argwh.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser:true});
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.set("view engine","ejs");
